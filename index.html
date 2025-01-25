@@ -23,8 +23,9 @@
       <!-- 4) Output a random number (0 to 1) -->
       <p>Favorite Number: RANDOM NUMBER BETWEEN 0 AND 1 {{randNum}}</p>
       <div>
+        <div v-if="isLoading">Loading...</div>
         <!-- 5) Display some image you found via Google -->
-        <img src="SOME IMAGE URL" />
+        <img v-else :src="imageUrl" />
       </div>
       <!-- 6) Prepopulate the input field with your name via the "value" attribute -->
       <input type="text" />
